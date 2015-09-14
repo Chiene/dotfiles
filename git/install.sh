@@ -9,11 +9,11 @@ read -e GIT_USER_NAME
 user "What is your email for git"
 read -e GIT_USER_EMAIL
 
-if [ -x $(command -v brew) ]; then
-    brew install git
-    brew install git-flow
-    brew install git-extras
-    brew install hub
+if [ -x $(command -v apt-get ) ]; then
+    sudo apt-get install git
+    sudo apt-get install git-flow
+    sudo apt-get install git-extras
+    sudo apt-get install hub
 fi
 
 if [[ -n ${GIT_USER_NAME} ]]; then

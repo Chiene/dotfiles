@@ -2,8 +2,8 @@
 
 head "Setting up Z Shell"
 
-if [ -x $(command -v brew) ]; then
-    brew install zsh
+if [ -x $(command -v apt-get) ]; then
+    sudo apt-get install zsh
 fi
 
 info "Looking for an existing zsh config ..."
@@ -38,7 +38,7 @@ else
     cp ${DOTFILES}/zsh/zlogout ${DOTTARGET}/.zlogout
 fi
 
-infor "Creating necessary directories ..."
+info "Creating necessary directories ..."
 [[ -e "${DOTFILES}/zsh/caches" ]] || mkdir -p "${DOTFILES}/zsh/caches"
 touch ${DOTFILES}/zsh/caches/.z
 

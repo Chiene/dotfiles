@@ -1,5 +1,5 @@
 #! /bin/sh
 
-if [ -x $(command -v brew) ]; then
-    brew install chruby
+if [ -x $(command -v apt-get) ]; then
+  sudo apt-get install chruby
 fi
